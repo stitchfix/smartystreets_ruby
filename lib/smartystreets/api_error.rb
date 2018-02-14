@@ -17,7 +17,7 @@ module SmartyStreets
 
 
     def self.from_code(code)
-      check_type(code, Fixnum)
+      check_type(code, Integer)
       case code
       when BAD_INPUT then new(code, 'Bad input. Required Fields missing from input, are malformed, or are too numerous.')
       when UNAUTHORIZED then new(code, 'Unauthorized. Authentication failure; invalid credentials')
