@@ -27,38 +27,26 @@ module SmartyStreets
       }
     end
 
-    @@request_url = LazyLoader.create_lazy_loader do
+    def self.request_url
       SmartyStreets.api_url + '/zipcode'
     end
 
-    def self.request_url
-      @@request_url.get
-    end
-
-    @@query = LazyLoader.create_lazy_loader do
+    def self.query
       {
         'auth-id' => SmartyStreets.auth_id,
         'auth-token' => SmartyStreets.auth_token
       }
     end
 
-    def self.query
-      @@query.get
-    end
-
     def self.body(*zipcode_requests)
       MultiJson.dump(zipcode_requests)
     end
 
-    @@headers = LazyLoader.create_lazy_loader do
+    def self.headers
       {
         'Content-Type' => 'application/json',
         'Accept' => 'application/json'
       }
-    end
-
-    def self.headers
-      @@headers.get
     end
 
     def self.zipcode_responses(response)
