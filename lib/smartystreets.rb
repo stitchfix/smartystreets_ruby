@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 
-require 'lazy_loader'
 require 'httparty'
 require 'multi_json'
 require 'thread'

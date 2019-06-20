@@ -19,7 +19,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'lazy_loader'
   gem.add_dependency 'httparty'
   gem.add_dependency 'multi_json'
   gem.add_dependency 'awesome_print'
